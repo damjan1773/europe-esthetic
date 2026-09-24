@@ -5,7 +5,7 @@ import { Calendar } from './Icons.jsx'
 import styles from './PillNav.module.css'
 
 const SEKCIJE = ['hero', 'tatjana', 'tretmani', 'rezultati', 'utisci', 'kontakt']
-const TAMNE = new Set(['rezultati'])
+const TAMNE = new Set(['rezultati', 'tatjana'])
 
 // Sekcija koja preseca horizontalnu liniju na sredini ekrana je trenutna.
 function useTrenutnaSekcija() {

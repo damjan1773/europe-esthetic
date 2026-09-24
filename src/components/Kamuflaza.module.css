@@ -11,7 +11,7 @@
   width: 360px;
   height: 360px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(226, 190, 168, 0.55) 0%, rgba(226, 190, 168, 0) 70%);
+  background: radial-gradient(circle, rgba(203, 196, 191, 0.55) 0%, rgba(203, 196, 191, 0) 70%);
 }
 
 .inner {
@@ -47,13 +47,13 @@
   height: 176px;
   border-radius: 66px 66px 20px 20px;
   background:
-    radial-gradient(ellipse 70% 50% at 50% 30%, #EBCDB6 0%, rgba(235, 205, 182, 0) 75%),
-    linear-gradient(180deg, #D9B498 0%, #B88C6C 100%);
+    radial-gradient(ellipse 70% 50% at 50% 30%, #D6D0CB 0%, rgba(214, 208, 203, 0) 75%),
+    linear-gradient(180deg, #BFB8B2 0%, #9A918A 100%);
 }
 
 .photoLabel {
   padding: 5px 9px;
-  border-color: rgba(255, 246, 236, 0.8);
+  border-color: rgba(255, 252, 247, 0.8);
   font-size: 10px;
 }
 
@@ -78,7 +78,7 @@
   gap: 14px;
   padding: 18px 16px 18px 20px;
   border-radius: 24px;
-  background: rgba(255, 250, 245, 0.7);
+  background: rgba(255, 252, 247, 0.7);
   border: 1px solid var(--c-linija-staklo);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);

@@ -8,7 +8,7 @@ export default function Tatjana() {
   return (
     <section id="tatjana" className={styles.section} aria-labelledby="tatjana-naslov">
       <Reveal>
-        <SectionLabel className={styles.label}>VAŠ KOZMETOLOG</SectionLabel>
+        <SectionLabel tone="dark" className={styles.label}>VAŠ KOZMETOLOG</SectionLabel>
       </Reveal>
 
       <Reveal className={styles.media}>

@@ -1,7 +1,7 @@
 .photo {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(170deg, #CDA887 0%, #A77D5A 55%, #7A5438 100%);
+  background: linear-gradient(170deg, #B1AAA3 0%, #888079 55%, #605852 100%);
 }
 
 .img {
@@ -18,10 +18,10 @@
 
 .label {
   padding: 7px 12px;
-  border: 1px dashed rgba(255, 244, 232, 0.7);
+  border: 1px dashed rgba(255, 252, 247, 0.7);
   border-radius: 999px;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
-  color: #FFF6EC;
+  color: #FFFFFF;
 }

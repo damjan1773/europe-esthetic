@@ -1,51 +1,53 @@
 :root {
+  /* Paleta: crna, slonovača/bela i zlato (po tetkinom crno-zlatnom logou) */
+
   /* Pozadine */
-  --c-krem: #F4ECE3;
-  --c-pesak: #EFE4D8;
-  --c-blush: #F2E6DD;
-  --c-kartica: #FBF6F0;
-  --c-kartica-otvorena: #F6EEE5;
+  --c-krem: #F7F4EF; /* slonovača – glavna svetla pozadina */
+  --c-pesak: #EFEAE2; /* malo tamnija slonovača – druga svetla sekcija */
+  --c-blush: #F3EEE7;
+  --c-kartica: #FFFFFF;
+  --c-kartica-otvorena: #FBF9F6;
 
   /* Tekst */
-  --c-espresso: #2A1D15;
-  --c-telo: #4F3D31;
-  --c-prigusen: #6B5444;
-  --c-telo-topli: #5E4A3C;
-  --c-braon: #5E3D26;
+  --c-espresso: #16130F; /* skoro crna – naslovi i tekst na svetlom */
+  --c-telo: #4A443E;
+  --c-prigusen: #716960;
+  --c-telo-topli: #5E5750;
+  --c-braon: #3A342E;
 
-  /* Akcenti */
-  --c-karamel: #A8764F;
-  --c-karamel-tamni: #7E5436;
-  --c-karamel-svetli: #C99A72;
-  --c-karamel-bledi: #D9B08C;
-  --c-pill: #F3E3D0;
-  --c-chip: #F1E4D6;
-  --c-chevron: #E8D9C8;
-  --c-ikonica: #E8D6C6;
-  --c-dugme-svetlo: #EFE2D4;
+  /* Zlato */
+  --c-zlatna: #C9A96E; /* linije, zvezdice, ikonice */
+  --c-zlatna-tamna: #8A6A30; /* zlatni tekst na svetlom (dovoljan kontrast) */
+  --c-zlatna-svetla: #D9BC82; /* linije i zvezdice na tamnom */
+  --c-zlatna-bleda: #E2C78F; /* zlatni tekst na tamnom */
+  --c-pill: #E3C68E; /* zlatna dugmad (tamni tekst) */
+  --c-chip: #F1ECE4;
+  --c-chevron: #EEE8DF;
+  --c-ikonica: #EFE9E0;
+  --c-dugme-svetlo: #F1ECE4;
 
   /* Linije */
-  --c-linija: #DFCDBA;
-  --c-linija-kartica: #EADCCD;
-  --c-linija-staklo: #E6D4C6;
-  --c-linija-mapa: #E3D3C2;
-  --c-tacka: #CDB6A1;
+  --c-linija: #E6DFD4;
+  --c-linija-kartica: #ECE6DC;
+  --c-linija-staklo: #E6DFD4;
+  --c-linija-mapa: #E6DFD4;
+  --c-tacka: #CFC6B8;
 
   /* Tamne sekcije */
-  --c-tamna: #2A1D15;
-  --c-tamna-duboka: #22160F;
-  --c-tamna-kartica: #3A2A1F;
-  --c-svetli-tekst: #F6EADC;
-  --c-utisak-svetli: #E9DACA;
+  --c-tamna: #141210;
+  --c-tamna-duboka: #0E0C0A;
+  --c-tamna-kartica: #221E1A;
+  --c-svetli-tekst: #F5F1EA;
+  --c-utisak-svetli: #EFE9E0;
 
   /* Staklo */
-  --glass-bg: rgba(255, 244, 232, 0.14);
-  --glass-border: rgba(255, 244, 232, 0.26);
+  --glass-bg: rgba(255, 252, 247, 0.12);
+  --glass-border: rgba(255, 252, 247, 0.22);
   --glass-blur: blur(18px);
 
   /* Navigacija */
-  --nav-bg: rgba(38, 27, 20, 0.72);
-  --nav-bg-tamna: rgba(20, 13, 9, 0.72);
+  --nav-bg: rgba(20, 18, 16, 0.78);
+  --nav-bg-tamna: rgba(10, 9, 8, 0.78);
   --nav-height: 64px;
 
   /* Fontovi */
@@ -102,7 +104,7 @@ body {
 }
 
 a {
-  color: var(--c-karamel-tamni);
+  color: var(--c-zlatna-tamna);
 }
 
 button {
@@ -115,7 +117,7 @@ img {
 }
 
 :focus-visible {
-  outline: 2px solid var(--c-karamel);
+  outline: 2px solid var(--c-zlatna);
   outline-offset: 2px;
 }
 

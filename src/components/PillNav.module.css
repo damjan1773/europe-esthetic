@@ -13,16 +13,16 @@
   background: var(--nav-bg);
   -webkit-backdrop-filter: blur(20px) saturate(1.4);
   backdrop-filter: blur(20px) saturate(1.4);
-  border: 1px solid rgba(255, 240, 225, 0.18);
+  border: 1px solid rgba(255, 252, 247, 0.18);
   border-radius: 999px;
-  box-shadow: 0 14px 34px rgba(20, 12, 6, 0.28);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
 }
 
 /* Varijanta iznad tamne sekcije (Rezultati) */
 .tamna {
   background: var(--nav-bg-tamna);
-  border-color: rgba(255, 240, 225, 0.2);
-  box-shadow: 0 14px 34px rgba(10, 6, 3, 0.4);
+  border-color: rgba(255, 252, 247, 0.2);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4);
 }
 
 .item {
@@ -44,7 +44,7 @@
   position: absolute;
   inset: 0;
   border-radius: 999px;
-  background: rgba(255, 240, 225, 0.14);
+  background: rgba(255, 252, 247, 0.14);
 }
 
 .itemLabel {

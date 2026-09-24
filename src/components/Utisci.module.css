@@ -80,11 +80,11 @@
 }
 
 .dark .starOn {
-  color: var(--c-karamel-svetli);
+  color: var(--c-zlatna-svetla);
 }
 
 .light .starOn {
-  color: var(--c-karamel);
+  color: var(--c-zlatna);
 }
 
 .starOff {
@@ -107,11 +107,11 @@
 }
 
 .dark .caption {
-  border-top: 1px solid rgba(246, 234, 220, 0.2);
+  border-top: 1px solid rgba(245, 241, 234, 0.2);
 }
 
 .light .caption {
-  border-top: 1px solid rgba(42, 29, 21, 0.15);
+  border-top: 1px solid rgba(20, 18, 16, 0.15);
 }
 
 .person {
@@ -135,13 +135,13 @@
 }
 
 .dark .avatar {
-  background: rgba(246, 234, 220, 0.14);
-  color: var(--c-karamel-bledi);
+  background: rgba(245, 241, 234, 0.14);
+  color: var(--c-zlatna-bleda);
 }
 
 .light .avatar {
-  background: rgba(42, 29, 21, 0.08);
-  color: var(--c-karamel-tamni);
+  background: rgba(20, 18, 16, 0.08);
+  color: var(--c-zlatna-tamna);
 }
 
 .name {
@@ -161,11 +161,11 @@
 }
 
 .dark .tag {
-  background: rgba(246, 234, 220, 0.14);
+  background: rgba(245, 241, 234, 0.14);
 }
 
 .light .tag {
-  background: rgba(42, 29, 21, 0.08);
+  background: rgba(20, 18, 16, 0.08);
 }
 
 .railEnd {

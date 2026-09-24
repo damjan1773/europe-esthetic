@@ -3,8 +3,9 @@
   flex-direction: column;
   gap: 22px;
   padding: 40px 16px 56px;
-  /* Pesak: odvaja je od Utisaka (krem) iznad i Kontakta (krem) ispod */
-  background: var(--c-pesak);
+  /* Crna sekcija sa zlatnim detaljima (kao „O nama” na maketi); odvaja Utiske i Kontakt (svetle) */
+  background: var(--c-tamna);
+  color: var(--c-svetli-tekst);
 }
 
 .label {
@@ -22,8 +23,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 50% 40% at 50% 34%, #E3C3A5 0%, rgba(227, 195, 165, 0) 72%),
-    linear-gradient(170deg, #CDA887 0%, #A77D5A 55%, #7A5438 100%);
+    radial-gradient(ellipse 50% 40% at 50% 34%, #CAC4BE 0%, rgba(202, 196, 190, 0) 72%),
+    linear-gradient(170deg, #B1AAA3 0%, #888079 55%, #605852 100%);
 }
 
 /* Uspravna fotografija: seče se po visini, a kadar je podignut da lice ostane u gornjem delu,
@@ -46,8 +47,8 @@
   gap: 12px;
   padding: 12px 18px 12px 14px;
   border-radius: 22px;
-  background: rgba(42, 29, 21, 0.46);
-  border: 1px solid rgba(255, 244, 232, 0.28);
+  background: rgba(20, 18, 16, 0.46);
+  border: 1px solid rgba(255, 252, 247, 0.28);
   -webkit-backdrop-filter: var(--glass-blur);
   backdrop-filter: var(--glass-blur);
   color: var(--c-svetli-tekst);
@@ -85,7 +86,7 @@
   margin: 0;
   font-size: 15px;
   line-height: 1.6;
-  color: var(--c-telo);
+  color: rgba(245, 241, 234, 0.78);
   text-wrap: pretty;
 }
 
@@ -93,5 +94,5 @@
   font-family: var(--font-serif);
   font-size: 22px;
   font-style: italic;
-  color: var(--c-karamel-tamni);
+  color: var(--c-zlatna-bleda);
 }

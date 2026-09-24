@@ -38,7 +38,7 @@
 .cat {
   border-radius: 26px;
   overflow: hidden;
-  background: var(--c-krem);
+  background: var(--c-kartica);
   border: 1px solid var(--c-linija);
 }
 
@@ -71,7 +71,7 @@
   font-family: var(--font-serif);
   font-size: 16px;
   font-style: italic;
-  color: var(--c-karamel-tamni);
+  color: var(--c-zlatna-tamna);
 }
 
 .catText {
@@ -179,6 +179,6 @@
   padding: 0 4px 0 10px;
   font-size: 13px;
   font-weight: 700;
-  color: var(--c-karamel-tamni);
+  color: var(--c-zlatna-tamna);
   text-decoration: none;
 }
