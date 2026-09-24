@@ -182,15 +182,19 @@ export default function Utisci() {
       </Reveal>
 
       {/* DEMO utisci (izmišljeni) – src/data/utisci.js. Zameniti pravim pre objavljivanja. */}
-      <div ref={railRef} className={styles.rail} onScroll={onScroll}>
-        <motion.div
-          ref={trackRef}
-          className={styles.track}
-          variants={rail}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
-        >
+      {/* whileInView je na vidljivom okviru (.rail), ne na redu (.track): red sa 20 kartica je
+          širok ~6000 px, pa nikad ne bi bilo 25% njega na ekranu i kartice bi ostale nevidljive.
+          Varijante (izoštravanje iz blura) se preko konteksta prenose na kartice u redu. */}
+      <motion.div
+        ref={railRef}
+        className={styles.rail}
+        onScroll={onScroll}
+        variants={rail}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <div ref={trackRef} className={styles.track}>
           {lista.map((u, i) => {
             const kopija = i >= n
             return (
@@ -220,8 +224,8 @@ export default function Utisci() {
             )
           })}
           <div className={styles.railEnd} aria-hidden="true" />
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
 
       <Reveal className={styles.footer}>
         <div className={styles.dots} aria-hidden="true">
