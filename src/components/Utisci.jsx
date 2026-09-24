@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
-import Reveal from './Reveal.jsx'
+import Reveal, { MARGINA } from './Reveal.jsx'
 import { izBlura } from './Hero.jsx'
 import SectionLabel from './SectionLabel.jsx'
 import { Star } from './Icons.jsx'
@@ -192,7 +192,7 @@ export default function Utisci() {
         variants={rail}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: true, amount: 0.25, margin: MARGINA }}
       >
         <div ref={trackRef} className={styles.track}>
           {lista.map((u, i) => {

@@ -1,5 +1,5 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import Reveal, { EASE } from './Reveal.jsx'
+import Reveal, { EASE, MARGINA } from './Reveal.jsx'
 import SectionLabel from './SectionLabel.jsx'
 import { ArrowUpRight, Chevron, Clock } from './Icons.jsx'
 import { kategorije, brojTretmana } from '../data/tretmani.js'
@@ -32,7 +32,7 @@ export default function Tretmani({ otvorena, onToggle }) {
         variants={lista}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2, margin: MARGINA }}
       >
         {kategorije.map((c) => {
           const open = c.id === otvorena

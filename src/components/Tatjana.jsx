@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import Photo from './Photo.jsx'
-import Reveal, { EASE } from './Reveal.jsx'
+import Reveal, { EASE, MARGINA } from './Reveal.jsx'
 import SectionLabel from './SectionLabel.jsx'
 import styles from './Tatjana.module.css'
 
@@ -23,7 +23,7 @@ export default function Tatjana() {
           className={styles.badge}
           initial={{ opacity: 0, scale: 0.88, y: 10 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.6, margin: MARGINA }}
           transition={{ duration: 0.55, ease: EASE, delay: 0.35 }}
         >
           <span className={styles.badgeNum}>25</span>
