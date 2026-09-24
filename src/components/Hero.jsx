@@ -71,14 +71,16 @@ export default function Hero() {
         className={styles.photoWrap}
         variants={slika}
       >
-        {/* Prethodna verzija: /images/hero-profil.webp (profil zatvorenih očiju) */}
+        {/* Prethodne verzije: /images/hero-osmeh.webp (nasmejana, karamel pozadina),
+            /images/hero-profil.webp (profil zatvorenih očiju) – obe imaju lice na sredini,
+            pa bi uz njih trebalo vratiti podizanje slike (translateY) u Hero.module.css */}
         <Photo
           src={HERO_SRC}
           priority
           className={styles.photo}
           imgClassName={styles.photoImg}
           labelClassName={styles.photoLabel}
-          alt="Nasmejana žena duge tamne kose, blistave i negovane kože"
+          alt="Žena tamne kose u crnoj haljini, sa rukom uz blistavo, negovano lice"
           hint="Mesto za fotografiju: portret žene preko celog ekrana, lice u gornjem delu kadra"
           label="FOTO · PORTRET, LICE GORE"
         />

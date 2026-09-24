@@ -29,25 +29,25 @@
   background: var(--c-tamna-duboka);
 }
 
-/* Fotografija (hero.webp): gornja četvrtina je prazan zid, a lice je na sredini.
-   Slika ide punom širinom i podignuta je za 25%, pa lice dolazi gore (kao u dizajnu),
-   a tekst pada preko vrata i ramena koja se pri dnu utapaju u tamnu pozadinu. */
+/* Fotografija (hero.webp): tamna pozadina, žena desno, lice već u gornjoj četvrtini kadra.
+   Slika ide punom širinom od vrha; levo ostaje tamni prostor za tekst, a donji kraj
+   (haljina) se utapa u tamnu pozadinu heroja.
+   (Prethodne fotografije su imale lice na sredini pa su bile podignute za 17–25% – videti git istoriju.) */
 .photoImg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
-  transform: translateY(-25%);
   -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
   mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
 }
 
-/* Visoki ekrani: ima mesta, pa je slika niže (kosa ispod gornjih dugmadi), a brada i dalje iznad teksta.
-   Na nižim ekranima ostaje -25%, inače bi naslov prešao preko lica. */
-@media (min-height: 780px) {
+/* Niži ekrani (Safari sa trakama): tekst počinje više, pa slika ide malo gore da
+   „EUROPE ESTHETIC” ne pređe preko ruke i brade */
+@media (max-height: 779px) {
   .photoImg {
-    transform: translateY(-17%);
+    transform: translateY(-6%);
   }
 }
 
