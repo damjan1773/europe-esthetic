@@ -21,10 +21,10 @@
   line-height: 1.02;
 }
 
+/* .rail je skrol kontejner (ručno prevlačenje), .track je red kartica u njemu.
+   Automatsko klizanje pomera .track preko transform-a (glatko, delovi piksela),
+   jer scrollLeft telefoni zaokružuju na cele piksele pa sporo klizanje „secka”. */
 .rail {
-  display: flex;
-  gap: 12px;
-  padding: 0 16px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-padding-inline: 16px;
@@ -34,6 +34,17 @@
 /* Dok red sam klizi, snap je isključen (inače bi ga vraćao na najbližu karticu) */
 .rail[data-auto] {
   scroll-snap-type: none;
+}
+
+.rail[data-auto] .track {
+  will-change: transform;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  gap: 12px;
+  padding: 0 16px;
 }
 
 .rail::-webkit-scrollbar {
