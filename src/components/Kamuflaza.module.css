@@ -1,0 +1,134 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  background: var(--c-blush);
+}
+
+.glow {
+  position: absolute;
+  right: -120px;
+  top: -80px;
+  width: 360px;
+  height: 360px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(226, 190, 168, 0.55) 0%, rgba(226, 190, 168, 0) 70%);
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 40px 16px 56px;
+}
+
+.label {
+  padding: 0 4px;
+}
+
+.intro {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  padding: 0 4px;
+}
+
+.title {
+  margin: 0;
+  flex: 1;
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.photo {
+  flex: 0 0 132px;
+  height: 176px;
+  border-radius: 66px 66px 20px 20px;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 30%, #EBCDB6 0%, rgba(235, 205, 182, 0) 75%),
+    linear-gradient(180deg, #D9B498 0%, #B88C6C 100%);
+}
+
+.photoLabel {
+  padding: 5px 9px;
+  border-color: rgba(255, 246, 236, 0.8);
+  font-size: 10px;
+}
+
+.body {
+  margin: 0;
+  padding: 0 4px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--c-telo);
+  text-wrap: pretty;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 16px 18px 20px;
+  border-radius: 24px;
+  background: rgba(255, 250, 245, 0.7);
+  border: 1px solid var(--c-linija-staklo);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: var(--c-espresso);
+  text-decoration: none;
+}
+
+.cardText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardName {
+  font-family: var(--font-serif);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.cardDesc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--c-telo-topli);
+}
+
+.cardIcon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--c-ikonica);
+  color: var(--c-espresso);
+}
+
+.cta {
+  align-self: flex-start;
+  margin-left: 4px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: var(--c-tamna);
+  color: var(--c-svetli-tekst);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+}

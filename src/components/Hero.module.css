@@ -1,0 +1,187 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--c-tamna-duboka);
+  color: var(--c-svetli-tekst);
+  /* Mesto za fiksnu navigaciju (64 px) + razmak */
+  padding-bottom: calc(112px + env(safe-area-inset-bottom));
+}
+
+.photoWrap {
+  position: absolute;
+  inset: 0;
+}
+
+.photo {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 58% 34% at 60% 24%, #E7BD97 0%, rgba(214, 165, 122, 0.55) 40%, rgba(0, 0, 0, 0) 72%),
+    radial-gradient(ellipse 80% 55% at 18% 8%, #A7734C 0%, rgba(0, 0, 0, 0) 70%),
+    linear-gradient(180deg, #86593A 0%, #563724 52%, #22160F 100%);
+}
+
+/* Pozadina ispod prave fotografije: tamna, da se donji kraj slike utopi u nju */
+.photo:has(img) {
+  background: var(--c-tamna-duboka);
+}
+
+/* Fotografija (hero.webp): gornja četvrtina je prazan zid, a lice je na sredini.
+   Slika ide punom širinom i podignuta je za 25%, pa lice dolazi gore (kao u dizajnu),
+   a tekst pada preko vrata i ramena koja se pri dnu utapaju u tamnu pozadinu. */
+.photoImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(-25%);
+  -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
+}
+
+/* Visoki ekrani: ima mesta, pa je slika niže (kosa ispod gornjih dugmadi), a brada i dalje iznad teksta.
+   Na nižim ekranima ostaje -25%, inače bi naslov prešao preko lica. */
+@media (min-height: 780px) {
+  .photoImg {
+    transform: translateY(-17%);
+  }
+}
+
+.photoLabel {
+  position: absolute;
+  top: 190px;
+  border-color: rgba(255, 240, 225, 0.55);
+  color: rgba(255, 240, 225, 0.9);
+}
+
+/* Niži ekrani (Safari sa trakama): oznaka ispod gornjih dugmadi, da ne udari u naslov */
+@media (max-height: 800px) {
+  .photoLabel {
+    top: calc(84px + env(safe-area-inset-top));
+  }
+}
+
+.grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  /* Vrh počinje punom bojom trake oko notcha (#22160F), pa se fotografija u nju utapa bez vidljive ivice */
+  background: linear-gradient(180deg, #22160F 0%, rgba(20, 13, 9, 0.35) 9%, rgba(20, 13, 9, 0) 18%, rgba(20, 13, 9, 0) 34%, rgba(20, 13, 9, 0.6) 58%, rgba(20, 13, 9, 0.9) 100%);
+  pointer-events: none;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(16px + env(safe-area-inset-top)) 16px 0;
+}
+
+.glass {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  color: var(--c-svetli-tekst);
+  text-decoration: none;
+}
+
+.location {
+  gap: 8px;
+  padding: 0 16px 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.call {
+  width: 44px;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+  margin-top: auto;
+  padding: 120px 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brandName {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+.brandSub {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  color: rgba(246, 234, 220, 0.8);
+}
+
+/* Ceo naslov u blagom kurzivu (EB Garamond Italic): umetnički, a lako čitljiv.
+   Ceo, ne samo deo – da ne deluje kao mešavina dva fonta usred rečenice. */
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.02;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.lead {
+  margin: 0;
+  max-width: 300px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(246, 234, 220, 0.9);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.cta {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: var(--c-pill);
+  color: var(--c-espresso);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+

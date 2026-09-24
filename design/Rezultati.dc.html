@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<title>Rezultati – pre i posle</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Manrope,"Helvetica Neue",sans-serif;color:#F6EADC;background:#2A1D15}
+a{color:#F3E3D0}a:hover{color:#FFFFFF}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: #2A1D15; font-family: Manrope, 'Helvetica Neue', sans-serif; color: #F6EADC;">
+
+
+<nav aria-label="Glavna navigacija" style="position: absolute; left: 16px; right: 16px; bottom: 16px; height: 64px; box-sizing: border-box; padding: 6px; display: flex; gap: 4px; align-items: center; background: rgba(20,13,9,0.72); backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); border: 1px solid rgba(255,240,225,0.2); border-radius: 999px; box-shadow: 0 14px 34px rgba(10,6,3,0.4);">
+<a href="Tretmani.dc.html" style="flex: 1; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 999px; color: #F6EADC; text-decoration: none; font-size: 14px; font-weight: 600;">Tretmani</a>
+<a href="Rezultati.dc.html" aria-current="page" style="flex: 1; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: rgba(255,240,225,0.14); color: #F6EADC; text-decoration: none; font-size: 14px; font-weight: 600;">Rezultati</a>
+<a href="Kontakt.dc.html" style="flex: 1.25; height: 52px; display: flex; gap: 8px; align-items: center; justify-content: center; border-radius: 999px; background: #F3E3D0; color: #2A1D15; text-decoration: none; font-size: 14px; font-weight: 700;">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M8 3v4M16 3v4M4 10h16"></path></svg>
+<span>Zakaži</span>
+</a>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 20px; padding: 40px 16px 0;">
+
+<header style="display: flex; flex-direction: column; gap: 10px; padding: 0 4px;">
+<div style="display: flex; align-items: center; gap: 10px;">
+<span style="width: 28px; height: 1px; background: #C99A72;"></span>
+<span style="font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: #D9B08C;">REZULTATI</span>
+</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 40px; font-weight: 500; line-height: 1.02;">Pre i posle</h2>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: rgba(246,234,220,0.78);">Prevucite liniju levo i desno da uporedite.</p>
+</header>
+
+<div style="position: relative; height: 430px; border-radius: 28px; overflow: hidden; background: #3A2A1F;">
+<div role="img" aria-label="Mesto za fotografiju: stanje pre tretmana" style="position: absolute; inset: 0; background: {{ex.beforeBg}};"></div>
+<div role="img" aria-label="Mesto za fotografiju: stanje posle tretmana" style="position: absolute; inset: 0; background: {{ex.afterBg}}; clip-path: {{afterClip}};"></div>
+<div style="position: absolute; left: 0; right: 0; top: 196px; display: flex; justify-content: center; pointer-events: none;">
+<span style="padding: 7px 12px; border: 1px dashed rgba(255,244,232,0.7); border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: #FFF6EC; background: rgba(42,29,21,0.25);">FOTO PRE · FOTO POSLE</span>
+</div>
+<span style="position: absolute; left: 12px; top: 12px; height: 32px; display: flex; align-items: center; padding: 0 14px; border-radius: 999px; background: rgba(42,29,21,0.5); border: 1px solid rgba(255,244,232,0.25); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); font-size: 12px; font-weight: 700; letter-spacing: 0.08em;">PRE</span>
+<span style="position: absolute; right: 12px; top: 12px; height: 32px; display: flex; align-items: center; padding: 0 14px; border-radius: 999px; background: rgba(243,227,208,0.88); color: #2A1D15; font-size: 12px; font-weight: 700; letter-spacing: 0.08em;">POSLE</span>
+<div style="position: absolute; top: 0; bottom: 0; left: {{handleLeft}}; width: 2px; margin-left: -1px; background: #F6EADC; pointer-events: none;"></div>
+<div style="position: absolute; top: 191px; left: {{handleLeft}}; width: 48px; height: 48px; margin-left: -24px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: #F6EADC; color: #2A1D15; box-shadow: 0 6px 18px rgba(20,12,6,0.35); pointer-events: none;">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4"></path></svg>
+</div>
+<label for="prePosle" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%);">Uporedi pre i posle</label>
+<input id="prePosle" type="range" min="0" max="100" value="{{pos}}" onChange="{{onSlide}}" style="position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize;">
+</div>
+
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 4px;">
+<div style="display: flex; flex-direction: column; gap: 2px;">
+<span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 500;">{{ex.name}}</span>
+<span style="font-size: 13px; color: rgba(246,234,220,0.75);">{{ex.note}}</span>
+</div>
+<div style="display: flex; gap: 8px;">
+<button type="button" onClick="{{prev}}" aria-label="Prethodni primer" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: transparent; border: 1px solid rgba(246,234,220,0.35); color: #F6EADC; cursor: pointer;">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+</button>
+<button type="button" onClick="{{next}}" aria-label="Sledeći primer" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: #F3E3D0; border: 0; color: #2A1D15; cursor: pointer;">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+</button>
+</div>
+</div>
+
+<div style="display: flex; gap: 6px; padding: 0 4px;">
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="3">
+<button type="button" onClick="{{d.pick}}" aria-label="{{d.label}}" style="height: 28px; display: flex; align-items: center; padding: 0 2px; border: 0; background: transparent; cursor: pointer;"><span style="display: block; width: {{d.w}}; height: 6px; border-radius: 999px; background: {{d.bg}}; transition: width 0.3s ease;"></span></button>
+</sc-for>
+</div>
+</div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { pos: 50, idx: 0 };
+  }
+  renderVals() {
+    var self = this;
+    var examples = [
+      { name: 'Derma pen', note: '[broj] tretmana · [period]',
+        beforeBg: 'radial-gradient(ellipse 55% 45% at 50% 40%, #B98C6A 0%, rgba(185,140,106,0) 75%), linear-gradient(160deg, #8C6548 0%, #5E412D 100%)',
+        afterBg: 'radial-gradient(ellipse 55% 45% at 50% 40%, #E6C3A2 0%, rgba(230,195,162,0) 75%), linear-gradient(160deg, #C79C78 0%, #8A5F3E 100%)' },
+      { name: 'Plazma pen', note: '[broj] tretmana · [period]',
+        beforeBg: 'radial-gradient(ellipse 50% 40% at 45% 35%, #A98165 0%, rgba(169,129,101,0) 75%), linear-gradient(170deg, #7B5A44 0%, #4E3727 100%)',
+        afterBg: 'radial-gradient(ellipse 50% 40% at 45% 35%, #E9CBAE 0%, rgba(233,203,174,0) 75%), linear-gradient(170deg, #C9A07E 0%, #8F6546 100%)' },
+      { name: 'Iscrtavanje obrva', note: '[broj] tretmana · [period]',
+        beforeBg: 'radial-gradient(ellipse 60% 35% at 50% 45%, #B58F72 0%, rgba(181,143,114,0) 75%), linear-gradient(150deg, #85624A 0%, #54392A 100%)',
+        afterBg: 'radial-gradient(ellipse 60% 35% at 50% 45%, #E4C2A4 0%, rgba(228,194,164,0) 75%), linear-gradient(150deg, #C19574 0%, #86593A 100%)' }
+    ];
+    var idx = this.state.idx;
+    var pos = this.state.pos;
+    var n = examples.length;
+    return {
+      ex: examples[idx],
+      pos: pos,
+      afterClip: 'inset(0 0 0 ' + pos + '%)',
+      handleLeft: pos + '%',
+      onSlide: function (e) { self.setState({ pos: Number(e.target.value) }); },
+      prev: function () { self.setState({ idx: (idx - 1 + n) % n, pos: 50 }); },
+      next: function () { self.setState({ idx: (idx + 1) % n, pos: 50 }); },
+      dots: examples.map(function (x, i) {
+        return {
+          label: 'Primer ' + (i + 1) + ': ' + x.name,
+          w: i === idx ? '28px' : '6px',
+          bg: i === idx ? '#F3E3D0' : 'rgba(246,234,220,0.35)',
+          pick: function () { self.setState({ idx: i, pos: 50 }); }
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

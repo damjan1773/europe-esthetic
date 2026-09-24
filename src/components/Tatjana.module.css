@@ -1,0 +1,91 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 40px 16px 56px;
+  /* Pesak: odvaja je od Utisaka (krem) iznad i Kontakta (krem) ispod */
+  background: var(--c-pesak);
+}
+
+.label {
+  padding: 0 4px;
+}
+
+.media {
+  position: relative;
+  height: 392px;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.photo {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 40% at 50% 34%, #E3C3A5 0%, rgba(227, 195, 165, 0) 72%),
+    linear-gradient(170deg, #CDA887 0%, #A77D5A 55%, #7A5438 100%);
+}
+
+.photoLabel {
+  position: absolute;
+  top: 150px;
+}
+
+.badge {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px 12px 14px;
+  border-radius: 22px;
+  background: rgba(42, 29, 21, 0.46);
+  border: 1px solid rgba(255, 244, 232, 0.28);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  color: var(--c-svetli-tekst);
+}
+
+.badgeNum {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+.badgeText {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 4px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--c-telo);
+  text-wrap: pretty;
+}
+
+.signature {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-style: italic;
+  color: var(--c-karamel-tamni);
+}

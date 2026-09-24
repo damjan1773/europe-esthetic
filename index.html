@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="sr-Latn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!-- Boja trake oko notcha (stariji iOS, Chrome). Ista kao body pozadina i vrh heroja (--c-tamna-duboka). -->
+    <meta name="theme-color" content="#22160F" />
+    <!-- Sačuvano na početni ekran: hero ide ispod status bara, preko celog ekrana -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Europe Esthetic" />
+    <meta name="description" content="Europe Esthetic – estetski salon u Novom Beogradu. Kozmetolog Tatjana Petrović, 25 godina iskustva. Jurija Gagarina 30G, zgrada Sun City." />
+    <title>Europe Esthetic – estetski salon, Novi Beograd</title>
+    <!-- Hero fotografija je prvo što se vidi: počinje da se preuzima odmah, zajedno sa stranicom -->
+    <link rel="preload" as="image" href="/images/hero.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

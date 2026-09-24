@@ -1,0 +1,189 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 0 56px;
+  background: var(--c-krem);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.rail {
+  display: flex;
+  gap: 12px;
+  padding: 0 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 16px;
+  scrollbar-width: none;
+}
+
+.rail::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  margin: 0;
+  flex: 0 0 300px;
+  /* Bez fiksne visine: sve kartice u redu se izjednače po najdužem utisku */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 26px 24px 22px;
+  border-radius: 28px;
+  scroll-snap-align: start;
+}
+
+.dark {
+  background: var(--c-tamna);
+  color: var(--c-svetli-tekst);
+}
+
+.light {
+  background: var(--c-utisak-svetli);
+  color: var(--c-espresso);
+}
+
+/* Recenzija: zvezdice, tekst u običnom (Manrope) slovu, inicijal + ime */
+.stars {
+  display: flex;
+  gap: 3px;
+}
+
+.dark .starOn {
+  color: var(--c-karamel-svetli);
+}
+
+.light .starOn {
+  color: var(--c-karamel);
+}
+
+.starOff {
+  opacity: 0.25;
+}
+
+.quote {
+  margin: 0;
+  flex-grow: 1;
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 16px;
+}
+
+.dark .caption {
+  border-top: 1px solid rgba(246, 234, 220, 0.2);
+}
+
+.light .caption {
+  border-top: 1px solid rgba(42, 29, 21, 0.15);
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.dark .avatar {
+  background: rgba(246, 234, 220, 0.14);
+  color: var(--c-karamel-bledi);
+}
+
+.light .avatar {
+  background: rgba(42, 29, 21, 0.08);
+  color: var(--c-karamel-tamni);
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tag {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dark .tag {
+  background: rgba(246, 234, 220, 0.14);
+}
+
+.light .tag {
+  background: rgba(42, 29, 21, 0.08);
+}
+
+.railEnd {
+  flex: 0 0 4px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 20px;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--c-tacka);
+}
+
+.dotActive {
+  width: 28px;
+  background: var(--c-tamna);
+}
+
+.hint {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-prigusen);
+}

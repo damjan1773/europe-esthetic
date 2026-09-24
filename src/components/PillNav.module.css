@@ -1,0 +1,62 @@
+.nav {
+  position: fixed;
+  z-index: 50;
+  /* Na širim ekranima nav prati centriranu kolonu od 480 px */
+  left: max(var(--gutter), calc(50% - var(--max-width) / 2 + var(--gutter)));
+  right: max(var(--gutter), calc(50% - var(--max-width) / 2 + var(--gutter)));
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  height: var(--nav-height);
+  padding: 6px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  background: var(--nav-bg);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  backdrop-filter: blur(20px) saturate(1.4);
+  border: 1px solid rgba(255, 240, 225, 0.18);
+  border-radius: 999px;
+  box-shadow: 0 14px 34px rgba(20, 12, 6, 0.28);
+}
+
+/* Varijanta iznad tamne sekcije (Rezultati) */
+.tamna {
+  background: var(--nav-bg-tamna);
+  border-color: rgba(255, 240, 225, 0.2);
+  box-shadow: 0 14px 34px rgba(10, 6, 3, 0.4);
+}
+
+.item {
+  position: relative;
+  flex: 1;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--c-svetli-tekst);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Aktivna pozadina; klizi između stavki (Framer Motion layoutId) */
+.indicator {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(255, 240, 225, 0.14);
+}
+
+.itemLabel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zakazi {
+  flex: 1.25;
+  background: var(--c-pill);
+  color: var(--c-espresso);
+  font-weight: 700;
+}

@@ -1,0 +1,27 @@
+.photo {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(170deg, #CDA887 0%, #A77D5A 55%, #7A5438 100%);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  padding: 7px 12px;
+  border: 1px dashed rgba(255, 244, 232, 0.7);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #FFF6EC;
+}

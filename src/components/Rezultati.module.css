@@ -1,0 +1,244 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 16px 56px;
+  background: var(--c-tamna);
+  color: var(--c-svetli-tekst);
+  /* Horizontalni potezi idu našem swipe-u, vertikalni skrolu stranice */
+  touch-action: pan-y;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 4px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.lead {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(246, 234, 220, 0.78);
+}
+
+/* --- Pre/posle --- */
+
+.compare {
+  --pos: 50%;
+  position: relative;
+  height: 430px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--c-tamna-kartica);
+  cursor: ew-resize;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.compare:focus-visible {
+  outline: 2px solid var(--c-pill);
+  outline-offset: 3px;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.layer img {
+  -webkit-user-drag: none;
+}
+
+.afterClip {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 0 0 var(--pos));
+  pointer-events: none;
+}
+
+.before-derma-pen {
+  background: radial-gradient(ellipse 55% 45% at 50% 40%, #B98C6A 0%, rgba(185, 140, 106, 0) 75%), linear-gradient(160deg, #8C6548 0%, #5E412D 100%);
+}
+
+.after-derma-pen {
+  background: radial-gradient(ellipse 55% 45% at 50% 40%, #E6C3A2 0%, rgba(230, 195, 162, 0) 75%), linear-gradient(160deg, #C79C78 0%, #8A5F3E 100%);
+}
+
+.before-plazma-pen {
+  background: radial-gradient(ellipse 50% 40% at 45% 35%, #A98165 0%, rgba(169, 129, 101, 0) 75%), linear-gradient(170deg, #7B5A44 0%, #4E3727 100%);
+}
+
+.after-plazma-pen {
+  background: radial-gradient(ellipse 50% 40% at 45% 35%, #E9CBAE 0%, rgba(233, 203, 174, 0) 75%), linear-gradient(170deg, #C9A07E 0%, #8F6546 100%);
+}
+
+.before-obrve {
+  background: radial-gradient(ellipse 60% 35% at 50% 45%, #B58F72 0%, rgba(181, 143, 114, 0) 75%), linear-gradient(150deg, #85624A 0%, #54392A 100%);
+}
+
+.after-obrve {
+  background: radial-gradient(ellipse 60% 35% at 50% 45%, #E4C2A4 0%, rgba(228, 194, 164, 0) 75%), linear-gradient(150deg, #C19574 0%, #86593A 100%);
+}
+
+.placeholderLabel {
+  position: absolute;
+  top: 196px;
+  background: rgba(42, 29, 21, 0.25);
+}
+
+.tagBefore,
+.tagAfter {
+  position: absolute;
+  top: 12px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  pointer-events: none;
+}
+
+.tagBefore {
+  left: 12px;
+  background: rgba(42, 29, 21, 0.5);
+  border: 1px solid rgba(255, 244, 232, 0.25);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.tagAfter {
+  right: 12px;
+  background: rgba(243, 227, 208, 0.88);
+  color: var(--c-espresso);
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  width: 2px;
+  margin-left: -1px;
+  background: var(--c-svetli-tekst);
+  pointer-events: none;
+}
+
+.handle {
+  position: absolute;
+  top: 191px;
+  left: var(--pos);
+  width: 48px;
+  height: 48px;
+  margin-left: -24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--c-svetli-tekst);
+  color: var(--c-espresso);
+  box-shadow: 0 6px 18px rgba(20, 12, 6, 0.35);
+  pointer-events: none;
+}
+
+/* --- Kontrole --- */
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 4px;
+}
+
+.caption,
+.captionInner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.note {
+  font-size: 13px;
+  color: rgba(246, 234, 220, 0.75);
+}
+
+.arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.prev,
+.next {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.prev {
+  background: transparent;
+  border: 1px solid rgba(246, 234, 220, 0.35);
+  color: var(--c-svetli-tekst);
+}
+
+.next {
+  background: var(--c-pill);
+  border: 0;
+  color: var(--c-espresso);
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+  padding: 0 4px;
+}
+
+/* Tap zona je 44 px visoka; negativna margina čuva raspored iz dizajna (28 px) */
+.dot {
+  height: 44px;
+  margin: -8px 0;
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dot span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(246, 234, 220, 0.35);
+  transition: width 0.3s ease;
+}
+
+.dotActive span {
+  width: 28px;
+  background: var(--c-pill);
+}

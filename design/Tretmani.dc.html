@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<title>Tretmani – Europe Esthetic</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Manrope,"Helvetica Neue",sans-serif;color:#2A1D15;background:#EFE4D8}
+a{color:#7E5436}a:hover{color:#5E3D26}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 1420px; overflow: hidden; background: #EFE4D8; font-family: Manrope, 'Helvetica Neue', sans-serif; color: #2A1D15;">
+<div style="display: flex; flex-direction: column; gap: 24px; padding: 40px 16px 120px;">
+
+<header style="display: flex; flex-direction: column; gap: 10px; padding: 0 4px;">
+<div style="display: flex; align-items: center; gap: 10px;">
+<span style="width: 28px; height: 1px; background: #A8764F;"></span>
+<span style="font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: #7E5436;">TRETMANI</span>
+</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 40px; font-weight: 500; line-height: 1.02; text-wrap: balance;">Nega prilagođena <em style="font-weight: 400;">baš vama</em></h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4F3D31;">Otvorite kategoriju i pogledajte tretmane. Tačan plan pravimo zajedno, na prvom terminu.</p>
+</header>
+
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="4">
+<section style="border-radius: 26px; overflow: hidden; background: {{c.cardBg}}; border: 1px solid #DFCDBA;">
+<button type="button" onClick="{{c.toggle}}" aria-expanded="{{c.expanded}}" style="width: 100%; min-height: 84px; box-sizing: border-box; display: flex; align-items: center; gap: 14px; padding: 16px 16px 16px 20px; background: transparent; border: 0; text-align: left; cursor: pointer; font: inherit; color: #2A1D15;">
+<span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-style: italic; color: #7E5436; width: 20px;">{{c.num}}</span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px;">
+<span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 27px; font-weight: 500; line-height: 1.1;">{{c.name}}</span>
+<span style="font-size: 13px; color: #6B5444;">{{c.count}}</span>
+</span>
+<span style="width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: {{c.chevBg}}; color: {{c.chevColor}}; transform: {{c.chevRot}}; transition: transform 0.3s ease;">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+</span>
+</button>
+<sc-if value="{{c.open}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 0 10px 10px;">
+<sc-for list="{{c.items}}" as="t" hint-placeholder-count="3">
+<article style="display: flex; flex-direction: column; gap: 10px; padding: 16px 16px 14px; border-radius: 20px; background: #FBF6F0; border: 1px solid #EADCCD;">
+<h3 style="margin: 0; font-size: 16px; font-weight: 700; line-height: 1.3;">{{t.name}}</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #4F3D31;">{{t.desc}}</p>
+<div style="display: flex; align-items: center; gap: 6px; padding-top: 2px;">
+<span style="height: 30px; display: flex; align-items: center; gap: 6px; padding: 0 12px; border-radius: 999px; background: #F1E4D6; font-size: 12px; font-weight: 600; color: #5E3D26;">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path></svg>
+<span>{{t.time}}</span>
+</span>
+<span style="height: 30px; display: flex; align-items: center; padding: 0 12px; border-radius: 999px; background: #F1E4D6; font-size: 12px; font-weight: 600; color: #5E3D26;">{{t.price}}</span>
+<a href="Kontakt.dc.html" style="margin-left: auto; height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 4px 0 10px; font-size: 13px; font-weight: 700; color: #7E5436; text-decoration: none;">
+<span>Zakaži</span>
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+</a>
+</div>
+</article>
+</sc-for>
+</div>
+</sc-if>
+</section>
+</sc-for>
+</div>
+</div>
+
+<nav aria-label="Glavna navigacija" style="position: absolute; left: 16px; right: 16px; bottom: 16px; height: 64px; box-sizing: border-box; padding: 6px; display: flex; gap: 4px; align-items: center; background: rgba(38,27,20,0.72); backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); border: 1px solid rgba(255,240,225,0.18); border-radius: 999px; box-shadow: 0 14px 34px rgba(20,12,6,0.28);">
+<a href="Tretmani.dc.html" aria-current="page" style="flex: 1; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: rgba(255,240,225,0.14); color: #F6EADC; text-decoration: none; font-size: 14px; font-weight: 600;">Tretmani</a>
+<a href="Rezultati.dc.html" style="flex: 1; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 999px; color: #F6EADC; text-decoration: none; font-size: 14px; font-weight: 600;">Rezultati</a>
+<a href="Kontakt.dc.html" style="flex: 1.25; height: 52px; display: flex; gap: 8px; align-items: center; justify-content: center; border-radius: 999px; background: #F3E3D0; color: #2A1D15; text-decoration: none; font-size: 14px; font-weight: 700;">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M8 3v4M16 3v4M4 10h16"></path></svg>
+<span>Zakaži</span>
+</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1420}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { open: 'podmladjivanje' };
+  }
+  renderVals() {
+    var cats = [
+      { id: 'podmladjivanje', num: '01', name: 'Podmlađivanje', items: [
+        { name: 'Derma pen', desc: 'Mikroiglični tretman koji podstiče prirodnu obnovu kolagena. Ujednačava teksturu kože i ublažava fine linije i ožiljke.' },
+        { name: 'Plazma pen', desc: 'Precizno zatezanje opuštene kože bez skalpela, najčešće u predelu kapaka i oko usana.' },
+        { name: 'Lift & Glow tretman kože', desc: 'Tretman za čvrstinu i prirodan sjaj, posle kog koža izgleda odmornije i zategnutije.' },
+        { name: 'Skin regeneration', desc: 'Obnova i jačanje kože kojoj su sunce, stres ili zahtevni tretmani oduzeli svežinu.' }
+      ]},
+      { id: 'nega', num: '02', name: 'Nega lica', items: [
+        { name: 'Piling', desc: 'Nežno uklanjanje odumrlih ćelija za glatku, svežu i ujednačenu kožu.' },
+        { name: 'Tretman podočnjaka', desc: 'Ciljana nega osetljive regije oko očiju, za svežiji i odmorniji pogled.' }
+      ]},
+      { id: 'obrve', num: '03', name: 'Obrve', items: [
+        { name: 'Iscrtavanje obrva', desc: 'Oblik i gustina obrva usklađeni sa crtama vašeg lica, za prirodan i uredan izgled.' }
+      ]},
+      { id: 'kamuflaza', num: '04', name: 'Kamuflaža', items: [
+        { name: 'Kamuflaža strija', desc: 'Tonsko usklađivanje strija sa okolnom kožom, pažljivo i u vašem tempu.' },
+        { name: 'Prikrivanje vitiliga', desc: 'Ujednačavanje tena na svetlijim poljima kože, nijansu po nijansu.' }
+      ]}
+    ];
+    var self = this;
+    var open = this.state.open;
+    var word = function (n) { return n === 1 ? ' tretman' : ' tretmana'; };
+    return {
+      cats: cats.map(function (c) {
+        var isOpen = c.id === open;
+        return {
+          id: c.id, num: c.num, name: c.name,
+          count: c.items.length + word(c.items.length),
+          open: isOpen,
+          expanded: isOpen ? 'true' : 'false',
+          cardBg: isOpen ? '#F6EEE5' : '#F4ECE3',
+          chevBg: isOpen ? '#2A1D15' : '#E8D9C8',
+          chevColor: isOpen ? '#F6EADC' : '#2A1D15',
+          chevRot: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+          toggle: function () { self.setState({ open: isOpen ? null : c.id }); },
+          items: c.items.map(function (t) {
+            return { name: t.name, desc: t.desc, time: 'XX min', price: 'od X din' };
+          })
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

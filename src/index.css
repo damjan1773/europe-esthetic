@@ -1,0 +1,146 @@
+:root {
+  /* Pozadine */
+  --c-krem: #F4ECE3;
+  --c-pesak: #EFE4D8;
+  --c-blush: #F2E6DD;
+  --c-kartica: #FBF6F0;
+  --c-kartica-otvorena: #F6EEE5;
+
+  /* Tekst */
+  --c-espresso: #2A1D15;
+  --c-telo: #4F3D31;
+  --c-prigusen: #6B5444;
+  --c-telo-topli: #5E4A3C;
+  --c-braon: #5E3D26;
+
+  /* Akcenti */
+  --c-karamel: #A8764F;
+  --c-karamel-tamni: #7E5436;
+  --c-karamel-svetli: #C99A72;
+  --c-karamel-bledi: #D9B08C;
+  --c-pill: #F3E3D0;
+  --c-chip: #F1E4D6;
+  --c-chevron: #E8D9C8;
+  --c-ikonica: #E8D6C6;
+  --c-dugme-svetlo: #EFE2D4;
+
+  /* Linije */
+  --c-linija: #DFCDBA;
+  --c-linija-kartica: #EADCCD;
+  --c-linija-staklo: #E6D4C6;
+  --c-linija-mapa: #E3D3C2;
+  --c-tacka: #CDB6A1;
+
+  /* Tamne sekcije */
+  --c-tamna: #2A1D15;
+  --c-tamna-duboka: #22160F;
+  --c-tamna-kartica: #3A2A1F;
+  --c-svetli-tekst: #F6EADC;
+  --c-utisak-svetli: #E9DACA;
+
+  /* Staklo */
+  --glass-bg: rgba(255, 244, 232, 0.14);
+  --glass-border: rgba(255, 244, 232, 0.26);
+  --glass-blur: blur(18px);
+
+  /* Navigacija */
+  --nav-bg: rgba(38, 27, 20, 0.72);
+  --nav-bg-tamna: rgba(20, 13, 9, 0.72);
+  --nav-height: 64px;
+
+  /* Fontovi */
+  /* EB Garamond umesto Cormorant Garamond iz dizajna: iste širine, ali kvačice na č ć š ž đ su deo slova */
+  --font-serif: 'EB Garamond', Georgia, serif;
+  --font-sans: Manrope, 'Helvetica Neue', sans-serif;
+
+  /* Raspored */
+  --max-width: 480px;
+  --gutter: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  /* Tamna kao vrh heroja: vidi se iznad sajta kad se stranica povuče nadole i oko notcha */
+  background: var(--c-tamna-duboka);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--c-espresso);
+  /* iOS Safari boji traku oko notcha bojom body pozadine, zato je na telefonu tamna
+     kao vrh heroja. Sve sekcije imaju svoju pozadinu, pa se ova inače ne vidi. */
+  background: var(--c-tamna-duboka);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Širi ekrani: krem pozadina oko centrirane kolone */
+@media (min-width: 481px) {
+  body {
+    background: var(--c-krem);
+  }
+}
+
+#root {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
+a {
+  color: var(--c-karamel-tamni);
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-karamel);
+  outline-offset: 2px;
+}
+
+/* Blago "utiskivanje" pri dodiru, kao kod native dugmadi */
+.tap {
+  transition: transform 0.15s ease;
+}
+
+.tap:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tap,
+  .tap:active {
+    transition: none;
+    transform: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
