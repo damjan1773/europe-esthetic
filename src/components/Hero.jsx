@@ -6,7 +6,8 @@ import { Calendar, Phone, Pin } from './Icons.jsx'
 import { telefon } from '../data/kontakt.js'
 import styles from './Hero.module.css'
 
-export const HERO_SRC = '/images/hero.webp'
+// Novo ime pri svakoj zameni slike: isto ime bi telefoni prikazivali iz keša (staru sliku)
+export const HERO_SRC = '/images/hero-crna.webp'
 const KASNJENJE = 0.5 // s: prvi element (gornja dugmad) kreće pola sekunde posle fotografije
 const RAZMAK = 0.25 // s: svaki sledeći talas kreće ovoliko posle prethodnog
 const BROJ_TALASA = 4 // EUROPE ESTHETIC, naslov, tekst, dugme
