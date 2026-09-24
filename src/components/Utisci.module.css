@@ -31,6 +31,11 @@
   scrollbar-width: none;
 }
 
+/* Dok red sam klizi, snap je isključen (inače bi ga vraćao na najbližu karticu) */
+.rail[data-auto] {
+  scroll-snap-type: none;
+}
+
 .rail::-webkit-scrollbar {
   display: none;
 }

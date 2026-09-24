@@ -51,6 +51,38 @@ export const utisci = [
     ocena: 5,
     tone: 'light',
   },
+  {
+    id: 7,
+    text: 'Imala sam tamne podočnjake koliko pamtim. Posle serije tretmana pogled mi je svežiji, a korektor koristim tek ponekad.',
+    name: 'Katarina D.',
+    tretman: 'Tretman podočnjaka',
+    ocena: 5,
+    tone: 'dark',
+  },
+  {
+    id: 8,
+    text: 'Posle leta na moru koža mi je bila suva i umorna. Skin regeneration ju je bukvalno vratila u život, i to već posle prvog dolaska.',
+    name: 'Jovana L.',
+    tretman: 'Skin regeneration',
+    ocena: 5,
+    tone: 'light',
+  },
+  {
+    id: 9,
+    text: 'Vitiligo me je godinama činio nesigurnom. Tatjana je strpljivo birala nijansu sa mnom i sada se svetla polja skoro ne primećuju. Hvala na pažnji i razumevanju.',
+    name: 'Snežana V.',
+    tretman: 'Prikrivanje vitiliga',
+    ocena: 5,
+    tone: 'dark',
+  },
+  {
+    id: 10,
+    text: 'Derma pen sam probala na preporuku drugarice i nije mi žao. Tekstura kože je finija, a fine linije oko očiju su se smekšale.',
+    name: 'Dragana T.',
+    tretman: 'Derma pen',
+    ocena: 5,
+    tone: 'light',
+  },
 ]
 
 // Placeholderi iz dizajna, za vraćanje umesto demo utisaka (bez ocene – zvezdice se tada ne prikazuju):
