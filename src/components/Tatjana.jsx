@@ -12,11 +12,12 @@ export default function Tatjana() {
       </Reveal>
 
       <Reveal className={styles.media}>
-        {/* PLACEHOLDER: fotografija – src="/images/tatjana.jpg" */}
         <Photo
+          src="/images/tatjana.jpg"
+          imgClassName={styles.photoImg}
           className={styles.photo}
           labelClassName={styles.photoLabel}
-          alt="Tatjana Petrović u salonu"
+          alt="Kozmetolog Tatjana Petrović u belom mantilu, u tretman sali salona"
           label="FOTO · TATJANA U SALONU"
         />
         <motion.div

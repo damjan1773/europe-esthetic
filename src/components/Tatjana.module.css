@@ -26,6 +26,12 @@
     linear-gradient(170deg, #CDA887 0%, #A77D5A 55%, #7A5438 100%);
 }
 
+/* Uspravna fotografija: seče se po visini, a kadar je podignut da lice ostane u gornjem delu,
+   dok oznaka „25 godina iskustva” dole levo pada preko mantila */
+.photoImg {
+  object-position: 50% 28%;
+}
+
 .photoLabel {
   position: absolute;
   top: 150px;
