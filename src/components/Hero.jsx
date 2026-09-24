@@ -7,7 +7,7 @@ import { telefon } from '../data/kontakt.js'
 import styles from './Hero.module.css'
 
 // Novo ime pri svakoj zameni slike: isto ime bi telefoni prikazivali iz keša (staru sliku)
-export const HERO_SRC = '/images/hero-crna.webp'
+export const HERO_SRC = '/images/hero-crna-v2.webp'
 const KASNJENJE = 0.5 // s: prvi element (gornja dugmad) kreće pola sekunde posle fotografije
 const RAZMAK = 0.25 // s: svaki sledeći talas kreće ovoliko posle prethodnog
 const BROJ_TALASA = 4 // EUROPE ESTHETIC, naslov, tekst, dugme
@@ -73,8 +73,8 @@ export default function Hero() {
         variants={slika}
       >
         {/* Prethodne verzije: /images/hero-osmeh.webp (nasmejana, karamel pozadina),
-            /images/hero-profil.webp (profil zatvorenih očiju) – obe imaju lice na sredini,
-            pa bi uz njih trebalo vratiti podizanje slike (translateY) u Hero.module.css */}
+            /images/hero-profil.webp (profil zatvorenih očiju). Uz drugu sliku treba prilagoditi
+            kadar (.photoImg u Hero.module.css) – on je izračunat za položaj lica na ovoj slici. */}
         <Photo
           src={HERO_SRC}
           priority

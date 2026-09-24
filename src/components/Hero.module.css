@@ -29,25 +29,26 @@
   background: var(--c-tamna-duboka);
 }
 
-/* Fotografija (hero-crna.webp): tamna pozadina, žena desno, lice već u gornjoj četvrtini kadra.
-   Slika ide punom širinom od vrha; levo ostaje tamni prostor za tekst, a donji kraj
-   (haljina) se utapa u tamnu pozadinu heroja.
-   (Prethodne fotografije su imale lice na sredini pa su bile podignute za 17–25% – videti git istoriju.) */
+/* Fotografija (hero-crna-v2.webp, 768x1376): žena u celoj figuri na tamnoj pozadini, lice je malo
+   (centar lica je na 73,5% širine i 25,4% visine slike). Slika je uvećana 1,6x i pomerena tako da lice
+   bude glavni fokus – gore desno, iznad teksta – a levo i dole ostaje tamni prostor za tekst.
+   Računica (W = širina heroja): slika je 1,6W široka i 2,87W visoka; left -51,6% stavlja centar lica
+   na 0,66W; translateY pomera lice gore (procenti su od visine same slike).
+   Napomena: slika je široka samo 768 px, pa jače uvećanje od ovoga bi na oštrim ekranima bilo mutno. */
 .photoImg {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: -51.6%;
+  width: 160%;
+  max-width: none;
   height: auto;
-  -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
-  mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
+  transform: translateY(-8.4%);
 }
 
-/* Niži ekrani (Safari sa trakama): tekst počinje više, pa slika ide malo gore da
-   „EUROPE ESTHETIC” ne pređe preko ruke i brade */
+/* Niži ekrani (Safari sa trakama): tekst počinje više, pa lice ide više (ispod gornjih dugmadi) */
 @media (max-height: 779px) {
   .photoImg {
-    transform: translateY(-6%);
+    transform: translateY(-15%);
   }
 }
 
