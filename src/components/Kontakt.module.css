@@ -88,12 +88,17 @@
   justify-content: center;
   gap: 10px;
   border-radius: 999px;
-  background: var(--c-kartica);
-  border: 1px solid var(--c-linija);
-  color: var(--c-espresso);
+  /* Crna dugmad: beli tekst, zlatna ikonica i tanak zlatni obrub */
+  background: var(--c-tamna);
+  border: 1px solid rgba(227, 198, 142, 0.35);
+  color: var(--c-svetli-tekst);
   text-decoration: none;
   font-size: 15px;
   font-weight: 700;
+}
+
+.pill svg {
+  color: var(--c-zlatna-bleda);
 }
 
 /* --- Mapa --- */
@@ -202,7 +207,9 @@
   gap: 4px;
   padding: 18px 20px;
   border-radius: 28px;
-  background: var(--c-pesak);
+  /* Crna kartica: zlatni naslov i ikonica, prigušeno beli dani, belo i podebljano vreme */
+  background: var(--c-tamna);
+  color: var(--c-svetli-tekst);
 }
 
 .hoursHead {
@@ -213,7 +220,7 @@
 }
 
 .hoursIcon {
-  color: var(--c-zlatna-tamna);
+  color: var(--c-zlatna-bleda);
 }
 
 .hoursTitle {
@@ -221,7 +228,7 @@
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: var(--c-zlatna-tamna);
+  color: var(--c-zlatna-bleda);
 }
 
 .hoursList {
@@ -232,7 +239,7 @@
   display: flex;
   justify-content: space-between;
   padding: 8px 0;
-  border-bottom: 1px solid var(--c-linija);
+  border-bottom: 1px solid rgba(245, 241, 234, 0.14);
   font-size: 15px;
 }
 
@@ -242,6 +249,7 @@
 
 .hoursRow dt {
   margin: 0;
+  color: rgba(245, 241, 234, 0.75);
 }
 
 .hoursRow dd {
