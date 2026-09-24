@@ -3,7 +3,12 @@ import Reveal, { EASE } from './Reveal.jsx'
 import SectionLabel from './SectionLabel.jsx'
 import { ArrowUpRight, Chevron, Clock } from './Icons.jsx'
 import { kategorije, brojTretmana } from '../data/tretmani.js'
+import { izBlura } from './Hero.jsx'
 import styles from './Tretmani.module.css'
+
+// Kategorije 01–04 se redom izoštre iz blura kad lista uđe u ekran (bez pomeranja, kao na prvoj strani)
+const lista = { hidden: {}, show: { transition: { staggerChildren: 0.15 } } }
+const kategorija = izBlura(8, 0.8)
 
 export default function Tretmani({ otvorena, onToggle }) {
   // Visina nije transformacija pa je MotionConfig ne gasi – zato ručno za reduced motion.
@@ -22,15 +27,20 @@ export default function Tretmani({ otvorena, onToggle }) {
         </p>
       </Reveal>
 
-      <div className={styles.list}>
-        {kategorije.map((c, i) => {
+      <motion.div
+        className={styles.list}
+        variants={lista}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {kategorije.map((c) => {
           const open = c.id === otvorena
           const panelId = `tretmani-${c.id}`
           return (
-            <Reveal
-              as="section"
+            <motion.section
               key={c.id}
-              delay={i * 0.06}
+              variants={kategorija}
               className={`${styles.cat} ${open ? styles.open : ''}`}
             >
               <h3 className={styles.catHeading}>
@@ -91,10 +101,10 @@ export default function Tretmani({ otvorena, onToggle }) {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </Reveal>
+            </motion.section>
           )
         })}
-      </div>
+      </motion.div>
     </section>
   )
 }
